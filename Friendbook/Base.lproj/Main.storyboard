@@ -58,10 +58,10 @@
             </objects>
             <point key="canvasLocation" x="-684" y="125"/>
         </scene>
-        <!--View Controller-->
+        <!--Friend Detail View Controller-->
         <scene sceneID="oKL-fM-vB5">
             <objects>
-                <viewController id="dMK-5W-Igf" sceneMemberID="viewController">
+                <viewController id="dMK-5W-Igf" customClass="FriendDetailViewController" customModule="Friendbook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VQY-ez-Nxk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -88,6 +88,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hAT-2i-HMi"/>
                     </view>
+                    <connections>
+                        <outlet property="birthdayLabel" destination="cJX-99-iaL" id="Nrh-qI-oWQ"/>
+                        <outlet property="nameLabel" destination="pfY-72-RAY" id="zNd-nw-Ztu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XAp-b0-fiW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
