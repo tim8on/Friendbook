@@ -16,7 +16,7 @@ class FriendListViewController: UIViewController, UITableViewDataSource, UITable
     @IBOutlet weak var tableView: UITableView!
     
     //make a list of "friends" - an array
-    let myFriends = ["Hannah","Alec","Lindsay","Melissa", "Jeremy", "Ramsey"]
+    let myFriends = ["Hanna","Alec","Lindsay","Melissa"]
     
     //make a variable to hold which friend was chosen
     var selectedFriend = "chosen one"
@@ -63,6 +63,17 @@ class FriendListViewController: UIViewController, UITableViewDataSource, UITable
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let detailViewController = segue.destination as! FriendDetailViewController
         detailViewController.name = self.selectedFriend
+        
+        //change the "birthdays" for each friend
+        if self.selectedFriend == "Hanna" {
+            detailViewController.birthday = "Project Manager"
+        } else if self.selectedFriend == "Alec" {
+            detailViewController.birthday = "Media Buyer"
+        } else if self.selectedFriend == "Lindsay" {
+            detailViewController.birthday = "Media Buyer"
+        } else if self.selectedFriend == "Melissa" {
+            detailViewController.birthday = "Graphic Designer"
+        }
     }
     
 }
