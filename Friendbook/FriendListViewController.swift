@@ -46,4 +46,9 @@ class FriendListViewController: UIViewController, UITableViewDataSource, UITable
         return cell
     }
     
+    //move to the detail screen when a friend is chosen
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "friendListToFriendDetailSegue", sender: self)
+    }
+    
 }
