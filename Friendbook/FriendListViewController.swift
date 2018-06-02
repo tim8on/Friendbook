@@ -15,6 +15,9 @@ class FriendListViewController: UIViewController, UITableViewDataSource, UITable
     //control drag table view to connect it to the code
     @IBOutlet weak var tableView: UITableView!
     
+    //make a list of "friends" - an array
+    let myFriends = ["Hannah","Alec","Lindsay","Melissa", "Jeremy", "Ramsey"]
+    
     //Something that happens when the app first loads the first screen.
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,13 +31,18 @@ class FriendListViewController: UIViewController, UITableViewDataSource, UITable
     
     //how many rows
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        
+        //make as many rows as there are friends in the array
+        return self.myFriends.count
     }
     
     //what's in a row - aka a cell
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
-        cell.textLabel!.text = "yo"
+        
+        //display each friend in a row
+        cell.textLabel!.text = myFriends[indexPath.row]
+        
         return cell
     }
     
